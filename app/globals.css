@@ -1,26 +1,83 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #0d0d1a;
+  color: white;
 }
+
+/* ── RADAR PULSE ─────────────────────────────────────────────────── */
+@keyframes radar-ping {
+  0%   { transform: scale(0.8); opacity: 0.8; }
+  100% { transform: scale(2.5); opacity: 0; }
+}
+.radar-ring {
+  animation: radar-ping 2s ease-out infinite;
+}
+.radar-ring-2 {
+  animation: radar-ping 2s ease-out infinite 0.6s;
+}
+.radar-ring-3 {
+  animation: radar-ping 2s ease-out infinite 1.2s;
+}
+
+/* ── SCANNING LINE ───────────────────────────────────────────────── */
+@keyframes scan {
+  0%   { top: 0%; opacity: 1; }
+  100% { top: 100%; opacity: 0; }
+}
+.scan-line {
+  animation: scan 2s linear infinite;
+}
+
+/* ── FEED ITEMS APPEARING ────────────────────────────────────────── */
+@keyframes feed-in {
+  0%   { opacity: 0; transform: translateX(-12px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+.feed-item-1 { animation: feed-in 0.4s ease forwards 0.2s; opacity: 0; }
+.feed-item-2 { animation: feed-in 0.4s ease forwards 0.9s; opacity: 0; }
+.feed-item-3 { animation: feed-in 0.4s ease forwards 1.6s; opacity: 0; }
+.feed-item-4 { animation: feed-in 0.4s ease forwards 2.3s; opacity: 0; }
+.feed-item-5 { animation: feed-in 0.4s ease forwards 3.0s; opacity: 0; }
+
+/* ── ALERT BADGE POP ─────────────────────────────────────────────── */
+@keyframes pop-in {
+  0%   { opacity: 0; transform: scale(0.6); }
+  70%  { transform: scale(1.1); }
+  100% { opacity: 1; transform: scale(1); }
+}
+.alert-pop {
+  animation: pop-in 0.5s ease forwards 3.4s;
+  opacity: 0;
+}
+
+/* ── BLINK CURSOR ────────────────────────────────────────────────── */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+.blink {
+  animation: blink 1s step-end infinite;
+}
+
+/* ── FLOAT ───────────────────────────────────────────────────────── */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-8px); }
+}
+.float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* ── FADE UP (section reveal) ────────────────────────────────────── */
+@keyframes fade-up {
+  0%   { opacity: 0; transform: translateY(24px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.fade-up { animation: fade-up 0.6s ease forwards; }
+.fade-up-1 { animation: fade-up 0.6s ease forwards 0.1s; opacity: 0; }
+.fade-up-2 { animation: fade-up 0.6s ease forwards 0.2s; opacity: 0; }
+.fade-up-3 { animation: fade-up 0.6s ease forwards 0.3s; opacity: 0; }
+.fade-up-4 { animation: fade-up 0.6s ease forwards 0.4s; opacity: 0; }
+.fade-up-5 { animation: fade-up 0.6s ease forwards 0.5s; opacity: 0; }
+.fade-up-6 { animation: fade-up 0.6s ease forwards 0.6s; opacity: 0; }
