@@ -150,7 +150,7 @@ export default function Home() {
           {[
             { icon: "🔔", title: "Instant Alerts", desc: "Get emailed the moment a competitor drops a new product or changes a price.", delay: "fade-up-1" },
             { icon: "📊", title: "Live Dashboard", desc: "Google Sheets dashboard always updated with the latest data across all stores.", delay: "fade-up-2" },
-            { icon: "🤖", title: "AI Insights", desc: "Claude AI analyzes the data and tells you what it means — trends, strategy, opportunities.", delay: "fade-up-3" },
+            { icon: "🤖", title: "AI Insights", desc: "AI analyzes the data and tells you what it means — trends, strategy, opportunities.", delay: "fade-up-3" },
             { icon: "💰", title: "Price Tracking", desc: "Every price change logged with old price, new price, and % change.", delay: "fade-up-4" },
             { icon: "📦", title: "Stock Monitoring", desc: "Know instantly when a product sells out or comes back in stock.", delay: "fade-up-5" },
             { icon: "📧", title: "Daily Report", desc: "Morning digest email with a 24-hour summary so you start every day informed.", delay: "fade-up-6" },
@@ -318,7 +318,7 @@ export default function Home() {
       <footer className="border-t border-white/10 py-10 px-6">
         <div className="max-w-4xl mx-auto flex flex-col items-center gap-4">
           <div className="font-bold text-lg">ShopSpy</div>
-          <p className="text-gray-500 text-sm">Built by Cedy Dasmarinas · Powered by Google Sheets + Claude AI</p>
+          <p className="text-gray-500 text-sm">Built by Cedy Dasmarinas · Powered by Google Sheets + AI</p>
           <div className="flex items-center gap-5 text-gray-400">
             <a href="mailto:cedd.dasma@gmail.com" className="hover:text-white transition" title="Email">
               <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25H4.5a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5H4.5a2.25 2.25 0 00-2.25 2.25m19.5 0l-9.75 6.75L2.25 6.75" /></svg>
