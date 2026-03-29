@@ -1,0 +1,9 @@
+# Never commit sensitive config
+src/Config.gs
+
+# Dataset files (may contain proprietary product data)
+src/dataset.jsonl
+*.jsonl
+
+# PDF docs
+*.pdf
